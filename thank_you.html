@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dziękujemy! — Toyota Warszawa</title>
+  <!-- GTM HEAD CODE — wstaw tutaj swój kod GTM -->
+  <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXX');</script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- GTM NOSCRIPT -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0"></iframe></noscript> -->
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">TOYOTA <span>WARSZAWA</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <section class="thankyou-section">
+    <div class="thankyou-box">
+      <div class="thankyou-icon">✅</div>
+      <h1>Dziękujemy!</h1>
+      <p>Twoja wiadomość została wysłana. Nasz doradca skontaktuje się z Tobą w ciągu 24 godzin.</p>
+      <div class="thankyou-btns">
+        <a href="index.html" class="btn btn-primary">Wróć na stronę główną</a>
+        <a href="katalog.html" class="btn btn-outline">Zobacz katalog</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 Toyota Warszawa — Strona demonstracyjna do nauki GTM</p>
+  </footer>
+
+  <script>
+    // GTM — conversion event on thank you page
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      'event': 'conversion',
+      'conversion_type': 'lead',
+      'page': '/thank_you'
+    });
+  </script>
+</body>
+</html>

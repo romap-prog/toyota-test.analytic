@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Model — Toyota Warszawa</title>
+  <!-- GTM HEAD CODE — wstaw tutaj swój kod GTM -->
+  <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXX');</script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- GTM NOSCRIPT -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0"></iframe></noscript> -->
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">TOYOTA <span>WARSZAWA</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="katalog.html">← Powrót do katalogu</a>
+  </div>
+
+  <section class="produkt-section">
+    <div class="produkt-visual">
+      <div class="produkt-img-box" id="model-img-box"></div>
+      <div class="color-picker">
+        <span>Kolor:</span>
+        <button class="color-btn active" data-color="Czerwony" style="background:#cc0000" title="Czerwony"></button>
+        <button class="color-btn" data-color="Biały" style="background:#f5f5f5; border: 1px solid #ccc" title="Biały"></button>
+        <button class="color-btn" data-color="Czarny" style="background:#111" title="Czarny"></button>
+        <button class="color-btn" data-color="Srebrny" style="background:#aaa" title="Srebrny"></button>
+      </div>
+    </div>
+
+    <div class="produkt-info">
+      <p class="produkt-label">Toyota</p>
+      <h1 id="model-name">Ładowanie...</h1>
+      <p class="produkt-price" id="model-price">—</p>
+      <p class="produkt-desc" id="model-desc">—</p>
+
+      <div class="produkt-specs" id="model-specs"></div>
+
+      <div class="produkt-btns">
+        <a href="kontakt.html" class="btn btn-primary" id="btn-jazda-probna">Umów jazdę próbną</a>
+        <button class="btn btn-outline" id="btn-oferta">Zapytaj o ofertę</button>
+      </div>
+
+      <div class="produkt-extra">
+        <div class="extra-item">✅ Bezpłatna dostawa do salonu</div>
+        <div class="extra-item">✅ Gwarancja 5 lat</div>
+        <div class="extra-item">✅ Bezpłatne przeglądy przez 3 lata</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tabs-section">
+    <div class="tabs">
+      <button class="tab active" data-tab="opis">Opis</button>
+      <button class="tab" data-tab="wyposazenie">Wyposażenie</button>
+      <button class="tab" data-tab="dane">Dane techniczne</button>
+    </div>
+    <div class="tab-content" id="tab-opis">
+      <p id="tab-opis-text">Pełny opis modelu...</p>
+    </div>
+    <div class="tab-content hidden" id="tab-wyposazenie">
+      <ul class="wyposazenie-list">
+        <li>✅ Toyota Safety Sense 3.0</li>
+        <li>✅ Adaptacyjny tempomat</li>
+        <li>✅ Kamera cofania 360°</li>
+        <li>✅ Bezkluczykowy dostęp</li>
+        <li>✅ Apple CarPlay / Android Auto</li>
+        <li>✅ Podgrzewane fotele przednie</li>
+        <li>✅ Klimatyzacja dwustrefowa</li>
+        <li>✅ System audio JBL</li>
+      </ul>
+    </div>
+    <div class="tab-content hidden" id="tab-dane">
+      <table class="dane-table" id="dane-table"></table>
+    </div>
+  </section>
+
+  <section class="scroll-section" style="margin-top:4rem;">
+    <h2>Podobne modele</h2>
+    <div class="models-grid">
+      <a href="produkt.html?model=corolla" class="model-card" data-model="Corolla">
+        <div class="model-img corolla-img"></div>
+        <div class="model-info"><h3>Corolla</h3><p class="model-price">od 89 900 zł</p></div>
+      </a>
+      <a href="produkt.html?model=rav4" class="model-card" data-model="RAV4">
+        <div class="model-img rav4-img"></div>
+        <div class="model-info"><h3>RAV4</h3><p class="model-price">od 149 900 zł</p></div>
+      </a>
+      <a href="produkt.html?model=yaris" class="model-card" data-model="Yaris">
+        <div class="model-img yaris-img"></div>
+        <div class="model-info"><h3>Yaris</h3><p class="model-price">od 74 900 zł</p></div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 Toyota Warszawa — Strona demonstracyjna do nauki GTM</p>
+  </footer>
+
+  <script src="gtm-events.js"></script>
+  <script>
+    const models = {
+      corolla: {
+        name: 'Corolla', price: 'od 89 900 zł',
+        desc: 'Bestsellerowy model segmentu C. Toyota Corolla łączy niezawodność z nowoczesną technologią hybrydową.',
+        specs: [['Silnik','2.0 Hybrid'],['Moc','196 KM'],['Spalanie','4.5L/100km'],['Skrzynia','CVT automatyczna'],['Napęd','FWD']],
+        opis: 'Toyota Corolla to jeden z najpopularniejszych samochodów na świecie. Nowa generacja oferuje ulepszoną technologię hybrydową, bardziej dynamiczny wygląd i wyższy poziom wyposażenia standardowego. Corolla to idealny wybór dla osób szukających niezawodnego, ekonomicznego i komfortowego samochodu do codziennej jazdy.'
+      },
+      rav4: {
+        name: 'RAV4', price: 'od 149 900 zł',
+        desc: 'Miejski SUV z napędem hybrydowym. Przestronny, dynamiczny, idealny dla rodzin.',
+        specs: [['Silnik','2.5 Hybrid'],['Moc','222 KM'],['Spalanie','5.0L/100km'],['Skrzynia','E-CVT'],['Napęd','AWD-i']],
+        opis: 'Toyota RAV4 to jeden z najpopularniejszych SUV-ów na rynku. Oferuje przestronną kabinę, zaawansowany napęd hybrydowy na wszystkie koła oraz wysoki poziom wyposażenia w zakresie bezpieczeństwa. Idealny dla rodzin oraz osób prowadzących aktywny tryb życia.'
+      },
+      yaris: {
+        name: 'Yaris', price: 'od 74 900 zł',
+        desc: 'Zwinny hatchback do miasta. Niska konsumpcja, łatwe parkowanie, nowoczesny design.',
+        specs: [['Silnik','1.5 Hybrid'],['Moc','116 KM'],['Spalanie','3.8L/100km'],['Skrzynia','CVT automatyczna'],['Napęd','FWD']],
+        opis: 'Toyota Yaris to idealne auto do miasta. Czwarta generacja tego modelu oferuje zupełnie nową architekturę, bardziej dynamiczny wygląd i ulepszoną technologię hybrydową. Dzięki niskiej konsumpcji paliwa i zwrotności, Yaris sprawdza się doskonale w miejskim ruchu.'
+      },
+      landcruiser: {
+        name: 'Land Cruiser', price: 'od 389 900 zł',
+        desc: 'Legenda terenu. Niezniszczalny, luksusowy i gotowy na każde wyzwanie.',
+        specs: [['Silnik','3.3 Twin-Turbo Diesel'],['Moc','309 KM'],['Spalanie','8.5L/100km'],['Skrzynia','10-biegowy automat'],['Napęd','4WD']],
+        opis: 'Toyota Land Cruiser 300 to następca legendy. Oferuje nowy silnik V6 twin-turbo diesel, zupełnie nową platformę TNGA-F oraz bogatsze wyposażenie. Land Cruiser to samochód dla tych, którzy potrzebują prawdziwych możliwości terenowych połączonych z luksusowym wykończeniem.'
+      },
+      chr: {
+        name: 'C-HR', price: 'od 119 900 zł',
+        desc: 'Odważny crossover z wyjątkowym designem i nowoczesną technologią hybrydową.',
+        specs: [['Silnik','2.0 Hybrid'],['Moc','197 KM'],['Spalanie','4.8L/100km'],['Skrzynia','E-CVT'],['Napęd','FWD']],
+        opis: 'Toyota C-HR to crossover dla osób ceniących oryginalny design. Nowa generacja oferuje całkowicie przeprojektowaną sylwetkę, nowy silnik hybrydowy oraz bogatsze wyposażenie. C-HR wyróżnia się na tle konkurencji odważnym stylem i dynamiczną jazdą.'
+      },
+      camry: {
+        name: 'Camry', price: 'od 169 900 zł',
+        desc: 'Reprezentacyjny sedan hybrydowy. Komfort klasy premium, niskie spalanie.',
+        specs: [['Silnik','2.5 Hybrid'],['Moc','218 KM'],['Spalanie','5.2L/100km'],['Skrzynia','E-CVT'],['Napęd','FWD']],
+        opis: 'Toyota Camry to reprezentacyjny sedan oferujący wysoki komfort jazdy i niskie spalanie dzięki technologii hybrydowej. Camry jest wyposażona w luksusowe wnętrze, zaawansowane systemy bezpieczeństwa oraz nowoczesną elektronikę. Idealny wybór dla wymagających kierowców.'
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const modelKey = params.get('model') || 'corolla';
+    const model = models[modelKey] || models.corolla;
+
+    document.title = `${model.name} — Toyota Warszawa`;
+    document.getElementById('model-name').textContent = model.name;
+    document.getElementById('model-price').textContent = model.price;
+    document.getElementById('model-desc').textContent = model.desc;
+    document.getElementById('tab-opis-text').textContent = model.opis;
+
+    const imgBox = document.getElementById('model-img-box');
+    imgBox.className = 'produkt-img-box ' + modelKey + '-img';
+
+    const specsEl = document.getElementById('model-specs');
+    specsEl.innerHTML = model.specs.map(([k,v]) => `<div class="spec-row"><span>${k}</span><strong>${v}</strong></div>`).join('');
+
+    const daneTable = document.getElementById('dane-table');
+    daneTable.innerHTML = model.specs.map(([k,v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+
+    // GTM — product view event
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      'event': 'model_view',
+      'model_name': model.name,
+      'model_price': model.price
+    });
+
+    // Tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
+
+        // GTM — tab click event
+        dataLayer.push({ 'event': 'tab_click', 'tab_name': tab.dataset.tab, 'model_name': model.name });
+      });
+    });
+
+    // Color picker
+    document.querySelectorAll('.color-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        dataLayer.push({ 'event': 'color_select', 'color': btn.dataset.color, 'model_name': model.name });
+      });
+    });
+
+    // Oferta button
+    document.getElementById('btn-oferta').addEventListener('click', () => {
+      dataLayer.push({ 'event': 'ask_for_offer', 'model_name': model.name });
+      alert('Zapytanie zostało wysłane! Nasz doradca skontaktuje się z Tobą.');
+    });
+  </script>
+</body>
+</html>

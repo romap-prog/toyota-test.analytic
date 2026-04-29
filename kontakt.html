@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt — Toyota Warszawa</title>
+  <!-- GTM HEAD CODE — wstaw tutaj swój kod GTM -->
+  <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXX');</script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- GTM NOSCRIPT -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0"></iframe></noscript> -->
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">TOYOTA <span>WARSZAWA</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Kontakt</h1>
+    <p>Skontaktuj się z nami lub umów jazdę próbną</p>
+  </div>
+
+  <section class="kontakt-section">
+
+    <div class="kontakt-info">
+      <h2>Toyota Warszawa</h2>
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <div>
+          <strong>Adres</strong>
+          <p>ul. Aleje Jerozolimskie 100<br>00-807 Warszawa</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📞</span>
+        <div>
+          <strong>Telefon</strong>
+          <p><a href="tel:+48221234567" id="phone-link">+48 22 123 45 67</a></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">✉️</span>
+        <div>
+          <strong>Email</strong>
+          <p><a href="mailto:kontakt@toyota-warszawa.pl" id="email-link">kontakt@toyota-warszawa.pl</a></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">🕐</span>
+        <div>
+          <strong>Godziny otwarcia</strong>
+          <p>Pon–Pt: 9:00–19:00<br>Sob: 10:00–16:00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="kontakt-form-box">
+      <h2>Wyślij wiadomość</h2>
+      <form id="contact-form" action="thank_you.html">
+
+        <div class="form-group">
+          <label for="imie">Imię i nazwisko *</label>
+          <input type="text" id="imie" name="imie" placeholder="Jan Kowalski" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="jan@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefon">Telefon</label>
+          <input type="tel" id="telefon" name="telefon" placeholder="+48 600 000 000">
+        </div>
+
+        <div class="form-group">
+          <label for="temat">Temat</label>
+          <select id="temat" name="temat">
+            <option value="jazda_probna">Jazda próbna</option>
+            <option value="oferta">Zapytanie o ofertę</option>
+            <option value="serwis">Serwis</option>
+            <option value="inne">Inne</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="model">Model (opcjonalnie)</label>
+          <select id="model" name="model">
+            <option value="">-- Wybierz model --</option>
+            <option value="Corolla">Corolla</option>
+            <option value="RAV4">RAV4</option>
+            <option value="Yaris">Yaris</option>
+            <option value="Land Cruiser">Land Cruiser</option>
+            <option value="C-HR">C-HR</option>
+            <option value="Camry">Camry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="wiadomosc">Wiadomość</label>
+          <textarea id="wiadomosc" name="wiadomosc" rows="4" placeholder="Napisz do nas..."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="zgoda" name="zgoda" required>
+          <label for="zgoda">Wyrażam zgodę na przetwarzanie danych osobowych *</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Wyślij wiadomość</button>
+      </form>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 Toyota Warszawa — Strona demonstracyjna do nauki GTM</p>
+  </footer>
+
+  <script src="gtm-events.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    // Form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const temat = document.getElementById('temat').value;
+      const model = document.getElementById('model').value;
+
+      // GTM — form submit event
+      dataLayer.push({
+        'event': 'form_submit',
+        'form_type': temat,
+        'selected_model': model || 'nie wybrano'
+      });
+
+      // Redirect to thank you page
+      window.location.href = 'thank_you.html';
+    });
+
+    // Phone click
+    document.getElementById('phone-link').addEventListener('click', () => {
+      dataLayer.push({ 'event': 'phone_click', 'phone': '+48221234567' });
+    });
+
+    // Email click
+    document.getElementById('email-link').addEventListener('click', () => {
+      dataLayer.push({ 'event': 'email_click' });
+    });
+
+    // Form field focus tracking
+    const fields = ['imie','email','telefon','temat','model','wiadomosc'];
+    fields.forEach(field => {
+      document.getElementById(field).addEventListener('focus', function() {
+        dataLayer.push({ 'event': 'form_field_focus', 'field_name': field });
+      });
+    });
+  </script>
+</body>
+</html>

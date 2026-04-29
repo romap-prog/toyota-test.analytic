@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Katalog modeli — Toyota Warszawa</title>
+  <!-- GTM HEAD CODE — wstaw tutaj swój kod GTM -->
+  <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXX');</script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- GTM NOSCRIPT -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0"></iframe></noscript> -->
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">TOYOTA <span>WARSZAWA</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="katalog.html" class="active">Katalog</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Katalog modeli</h1>
+    <p>Wybierz swój wymarzony samochód</p>
+  </div>
+
+  <section class="katalog-section">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Wszystkie</button>
+      <button class="filter-btn" data-filter="hybrid">Hybryda</button>
+      <button class="filter-btn" data-filter="suv">SUV</button>
+      <button class="filter-btn" data-filter="sedan">Sedan</button>
+    </div>
+
+    <div class="katalog-grid">
+
+      <div class="katalog-card" data-category="hybrid sedan">
+        <div class="katalog-img corolla-img"></div>
+        <div class="katalog-info">
+          <span class="tag-hybrid">Hybrid</span>
+          <h3>Toyota Corolla</h3>
+          <p>Bestseller segmentu C. Niezawodna, ekonomiczna, komfortowa.</p>
+          <div class="specs">
+            <span>🔋 2.0 Hybrid</span>
+            <span>⚡ 196 KM</span>
+            <span>⛽ 4.5L/100km</span>
+          </div>
+          <div class="katalog-footer">
+            <span class="price">od 89 900 zł</span>
+            <a href="produkt.html?model=corolla" class="btn btn-primary btn-sm" data-model="Corolla">Zobacz model</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="katalog-card" data-category="hybrid suv">
+        <div class="katalog-img rav4-img"></div>
+        <div class="katalog-info">
+          <span class="tag-hybrid">Hybrid</span>
+          <h3>Toyota RAV4</h3>
+          <p>Miejski SUV z napędem hybrydowym. Przestronny i dynamiczny.</p>
+          <div class="specs">
+            <span>🔋 2.5 Hybrid</span>
+            <span>⚡ 222 KM</span>
+            <span>⛽ 5.0L/100km</span>
+          </div>
+          <div class="katalog-footer">
+            <span class="price">od 149 900 zł</span>
+            <a href="produkt.html?model=rav4" class="btn btn-primary btn-sm" data-model="RAV4">Zobacz model</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="katalog-card" data-category="hybrid">
+        <div class="katalog-img yaris-img"></div>
+        <div class="katalog-info">
+          <span class="tag-hybrid">Hybrid</span>
+          <h3>Toyota Yaris</h3>
+          <p>Miejski hatchback. Zwinny, oszczędny, idealny do miasta.</p>
+          <div class="specs">
+            <span>🔋 1.5 Hybrid</span>
+            <span>⚡ 116 KM</span>
+            <span>⛽ 3.8L/100km</span>
+          </div>
+          <div class="katalog-footer">
+            <span class="price">od 74 900 zł</span>
+            <a href="produkt.html?model=yaris" class="btn btn-primary btn-sm" data-model="Yaris">Zobacz model</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="katalog-card" data-category="suv">
+        <div class="katalog-img landcruiser-img"></div>
+        <div class="katalog-info">
+          <span class="tag-premium">Premium</span>
+          <h3>Toyota Land Cruiser</h3>
+          <p>Legenda terenu. Niezniszczalny, luksusowy, wszechstronny.</p>
+          <div class="specs">
+            <span>🔋 3.3 Diesel</span>
+            <span>⚡ 309 KM</span>
+            <span>⛽ 8.5L/100km</span>
+          </div>
+          <div class="katalog-footer">
+            <span class="price">od 389 900 zł</span>
+            <a href="produkt.html?model=landcruiser" class="btn btn-primary btn-sm" data-model="Land Cruiser">Zobacz model</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="katalog-card" data-category="hybrid suv">
+        <div class="katalog-img cx5-img"></div>
+        <div class="katalog-info">
+          <span class="tag-hybrid">Hybrid</span>
+          <h3>Toyota C-HR</h3>
+          <p>Crossover z charakterem. Odważny design, nowoczesna technologia.</p>
+          <div class="specs">
+            <span>🔋 2.0 Hybrid</span>
+            <span>⚡ 197 KM</span>
+            <span>⛽ 4.8L/100km</span>
+          </div>
+          <div class="katalog-footer">
+            <span class="price">od 119 900 zł</span>
+            <a href="produkt.html?model=chr" class="btn btn-primary btn-sm" data-model="C-HR">Zobacz model</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="katalog-card" data-category="sedan">
+        <div class="katalog-img camry-img"></div>
+        <div class="katalog-info">
+          <span class="tag-premium">Premium</span>
+          <h3>Toyota Camry</h3>
+          <p>Reprezentacyjny sedan. Komfort klasy premium w rozsądnej cenie.</p>
+          <div class="specs">
+            <span>🔋 2.5 Hybrid</span>
+            <span>⚡ 218 KM</span>
+            <span>⛽ 5.2L/100km</span>
+          </div>
+          <div class="katalog-footer">
+            <span class="price">od 169 900 zł</span>
+            <a href="produkt.html?model=camry" class="btn btn-primary btn-sm" data-model="Camry">Zobacz model</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Nie możesz się zdecydować?</h2>
+    <p>Nasi doradcy pomogą wybrać idealny model dla Ciebie.</p>
+    <a href="kontakt.html" class="btn btn-primary" id="katalog-contact-cta">Skontaktuj się z nami</a>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 Toyota Warszawa — Strona demonstracyjna do nauki GTM</p>
+  </footer>
+
+  <script src="gtm-events.js"></script>
+  <script>
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.katalog-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        // GTM dataLayer push for filter click
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'filter_click',
+          'filter_value': filter
+        });
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

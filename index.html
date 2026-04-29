@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toyota Warszawa — Salon Samochodowy</title>
+  <!-- GTM HEAD CODE — wstaw tutaj swój kod GTM -->
+  <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXX');</script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- GTM NOSCRIPT — wstaw tutaj swój kod GTM -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0"></iframe></noscript> -->
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">TOYOTA <span>WARSZAWA</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Strona główna</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-label">Nowość 2024</p>
+      <h1>Poczuj<br><span>różnicę</span></h1>
+      <p class="hero-sub">Odkryj nową gamę modeli Toyota. Hybrydowe, elektryczne, niezawodne.</p>
+      <div class="hero-btns">
+        <a href="katalog.html" class="btn btn-primary" id="hero-cta">Zobacz modele</a>
+        <a href="kontakt.html" class="btn btn-outline" id="hero-contact">Umów jazdę próbną</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="car-placeholder">
+        <svg viewBox="0 0 500 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="250" cy="200" rx="220" ry="18" fill="#ff0000" opacity="0.15"/>
+          <path d="M60 160 Q80 100 140 85 Q180 75 250 72 Q320 75 360 85 Q420 100 440 160 Z" fill="#cc0000"/>
+          <path d="M100 160 Q110 110 160 95 Q200 82 250 80 Q300 82 340 95 Q390 110 400 160 Z" fill="#ff1a1a"/>
+          <path d="M150 95 Q180 65 250 60 Q320 65 350 95 Z" fill="#e8e8e8" opacity="0.9"/>
+          <path d="M155 95 Q185 68 250 63 Q315 68 345 95 Z" fill="#b0d4f0"/>
+          <rect x="60" y="155" width="380" height="20" rx="4" fill="#aa0000"/>
+          <circle cx="130" cy="178" r="22" fill="#222"/>
+          <circle cx="130" cy="178" r="14" fill="#555"/>
+          <circle cx="130" cy="178" r="6" fill="#888"/>
+          <circle cx="370" cy="178" r="22" fill="#222"/>
+          <circle cx="370" cy="178" r="14" fill="#555"/>
+          <circle cx="370" cy="178" r="6" fill="#888"/>
+          <rect x="62" y="148" width="50" height="12" rx="2" fill="#ffcc00" opacity="0.9"/>
+          <rect x="388" y="148" width="50" height="12" rx="2" fill="#ff4400" opacity="0.9"/>
+          <path d="M235 72 L230 62 L270 62 L265 72 Z" fill="#cc0000" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-item">
+      <span class="feature-icon">⚡</span>
+      <h3>Hybryda</h3>
+      <p>Technologia hybrydowa drugiej generacji. Mniejsze spalanie, większa dynamika.</p>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">🛡️</span>
+      <h3>Bezpieczeństwo</h3>
+      <p>Toyota Safety Sense w standardzie. 5 gwiazdek Euro NCAP.</p>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">🔧</span>
+      <h3>Serwis</h3>
+      <p>Bezpłatne przeglądy przez pierwsze 3 lata. Gwarancja 5 lat.</p>
+    </div>
+  </section>
+
+  <section class="models-preview">
+    <h2>Popularne modele</h2>
+    <div class="models-grid">
+      <a href="produkt.html?model=corolla" class="model-card" data-model="Corolla">
+        <div class="model-img corolla-img"></div>
+        <div class="model-info">
+          <h3>Corolla</h3>
+          <p class="model-price">od 89 900 zł</p>
+          <span class="model-tag">Bestseller</span>
+        </div>
+      </a>
+      <a href="produkt.html?model=rav4" class="model-card" data-model="RAV4">
+        <div class="model-img rav4-img"></div>
+        <div class="model-info">
+          <h3>RAV4</h3>
+          <p class="model-price">od 149 900 zł</p>
+          <span class="model-tag">SUV</span>
+        </div>
+      </a>
+      <a href="produkt.html?model=yaris" class="model-card" data-model="Yaris">
+        <div class="model-img yaris-img"></div>
+        <div class="model-info">
+          <h3>Yaris</h3>
+          <p class="model-price">od 74 900 zł</p>
+          <span class="model-tag">Hybrid</span>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top: 2rem;">
+      <a href="katalog.html" class="btn btn-primary" id="see-all-models">Zobacz wszystkie modele</a>
+    </div>
+  </section>
+
+  <section class="scroll-section">
+    <h2>Dlaczego Toyota Warszawa?</h2>
+    <p>Ponad 20 lat doświadczenia. Ponad 5000 zadowolonych klientów rocznie.</p>
+    <div class="stats">
+      <div class="stat"><span class="stat-num">20+</span><span class="stat-label">lat doświadczenia</span></div>
+      <div class="stat"><span class="stat-num">5000+</span><span class="stat-label">klientów rocznie</span></div>
+      <div class="stat"><span class="stat-num">98%</span><span class="stat-label">zadowolonych klientów</span></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 Toyota Warszawa — Strona demonstracyjna do nauki GTM</p>
+    <p style="font-size:0.75rem; opacity:0.5; margin-top:0.5rem;">To jest fikcyjna strona stworzona wyłącznie do celów edukacyjnych</p>
+  </footer>
+
+  <script src="gtm-events.js"></script>
+</body>
+</html>
